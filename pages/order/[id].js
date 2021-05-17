@@ -73,9 +73,16 @@ export default function SingleOrderPage({ query }) {
             />
             <div className="item-details">
               <h2>{item.name}</h2>
-              <p>Qty: {item.quantity}</p>
-              <p>Each: {formatMoney(item.price)}</p>
-              <p>Sub Total: {formatMoney(item.price * item.quantity)}</p>
+              <p>
+                <strong>Qty:</strong> {item.quantity}
+              </p>
+              <p>
+                <strong>Each:</strong> {formatMoney(item.price)}
+              </p>
+              <p>
+                <strong>Sub Total:</strong>{' '}
+                {formatMoney(item.price * item.quantity)}
+              </p>
               <p>{item.description}</p>
             </div>
           </div>
