@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { useCart } from '../lib/cartState';
 import CartCounter from './CartCounter';
 import SignOut from './SignOut';
-import { AccountSvg, CartSvg } from './styles/Svg';
+import { AccountSvg, CartSvg, SearchSvg } from './styles/Svg';
 import NavStyles from './styles/NavStyles';
 import { useUser } from './User';
 
@@ -44,6 +44,12 @@ export default function Nav() {
           </button>
         </>
       )}
+
+      {/* {
+        <button type="button">
+          <SearchSvg />
+        </button>
+      } */}
 
       {!user && (
         <>

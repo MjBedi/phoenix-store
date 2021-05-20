@@ -7,16 +7,25 @@ import Search from './Search';
 // ------------------STYLED COMPONENTS------------------
 
 const HeaderStyles = styled.header`
-  /* background: var(--lightgray); */
   .bar {
     display: grid;
     grid-template-columns: 1fr auto;
     grid-gap: 2rem;
     padding: 0 2rem;
-    /* text-align: center; */
     justify-content: space-around;
     border-bottom: 0.8rem solid var(--black, #000);
     overflow: hidden;
+
+    /* position: fixed;
+    display: flex;
+    justify-content: space-evenly;
+    top: 0;
+    width: 100%;
+    max-width: 100%;
+    min-height: 64px;
+    box-shadow: 0px 1px 0px 0 rgb(0 0 0 / 10%);
+    backdrop-filter: saturate(200%) blur(10px);
+    z-index: 100; */
   }
 
   .sub-bar {
