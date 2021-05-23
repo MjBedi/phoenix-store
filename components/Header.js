@@ -8,24 +8,22 @@ import Search from './Search';
 
 const HeaderStyles = styled.header`
   .bar {
-    display: grid;
+    display: flex;
+    flex-flow: row nowrap;
+    max-width: var(--maxwidth);
+    margin: 0 auto;
+    padding: 0 2rem;
+    overflow: hidden;
+    justify-content: space-between;
+    /* border-bottom: 0.8rem solid var(--black,#000); */
+
+    /* display: grid;
     grid-template-columns: 1fr auto;
     grid-gap: 2rem;
     padding: 0 2rem;
     justify-content: space-around;
     border-bottom: 0.8rem solid var(--black, #000);
-    overflow: hidden;
-
-    /* position: fixed;
-    display: flex;
-    justify-content: space-evenly;
-    top: 0;
-    width: 100%;
-    max-width: 100%;
-    min-height: 64px;
-    box-shadow: 0px 1px 0px 0 rgb(0 0 0 / 10%);
-    backdrop-filter: saturate(200%) blur(10px);
-    z-index: 100; */
+    overflow: hidden; */
   }
 
   .sub-bar {
@@ -50,20 +48,18 @@ const loading = keyframes`
 `;
 
 const Logo = styled.h1`
-  font-size: clamp(2rem, 3.2vw, 3.8rem);
+  font-size: clamp(2.4rem, 3.2vw, 3.8rem);
   position: relative;
   /* transform: skew(-10deg); */
   z-index: 2;
   white-space: nowrap;
 
   a {
-    /* background: var(--primary);
-    color: white; */
-    padding: 0.4rem 1rem;
+    /* padding: 0.4rem 1rem;
+    margin-left: 2rem; */
     text-decoration: none;
     text-transform: uppercase;
     font-weight: bold;
-    margin-left: 2rem;
     /* Text Background Gradience */
     background-image: linear-gradient(
       59deg,

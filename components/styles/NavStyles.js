@@ -5,8 +5,8 @@ const NavStyles = styled.ul`
   padding: 0;
   display: flex;
   justify-self: end;
-  /* font-size: 2rem; */
   white-space: nowrap;
+  /* font-size: 2rem; */
   a,
   button {
     padding: clamp(1.4rem, 1.8vh, 2.6rem) clamp(1rem, 1.4vw, 2rem);
@@ -15,7 +15,7 @@ const NavStyles = styled.ul`
     position: relative;
     text-transform: uppercase;
     font-weight: 900;
-    font-size: clamp(0.8rem, 2vw, 2rem);
+    font-size: clamp(1.6rem, 2vw, 2rem);
     /* font-size: 2.4rem; */
     background: none;
     border: 0;

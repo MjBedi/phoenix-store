@@ -8,7 +8,7 @@ import GlobalStyles from './styles/GlobalStyles';
 const InnerStyles = styled.div`
   max-width: var(--maxwidth);
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0 2rem;
 `;
 
 // ------------------PAGE COMPONENT------------------
