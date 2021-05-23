@@ -14,8 +14,9 @@ const loading = keyframes`
 
 const Form = styled.form`
   box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.05);
-  background: rgba(0, 0, 0, 0.02);
-  border: 5px solid white;
+  background: var(--litTwo);
+  border: 5px solid var(--litThree);
+  border-radius: 1rem;
   padding: 20px;
   font-size: clamp(1.8rem, 2.5vw, 2.1rem);
   line-height: 1.5;
@@ -42,7 +43,8 @@ const Form = styled.form`
     background: var(--purple);
     color: white;
     border: 0;
-    font-size: 2rem;
+    border-radius: 0.6rem;
+    font-size: 1.8rem;
     font-weight: 600;
     padding: 0.5rem 1.2rem;
 
@@ -59,7 +61,7 @@ const Form = styled.form`
       opacity: 0.5;
     }
     &::before {
-      height: 10px;
+      height: 8px;
       content: '';
       display: block;
       background-image: linear-gradient(
