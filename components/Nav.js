@@ -25,8 +25,8 @@ export default function Nav() {
       {/* LOGGED-IN State */}
       {user && (
         <>
-          <Link href="/sell">Sell</Link>
-          <Link href="/orders">Orders</Link>
+          {/* <Link href="/sell">Sell</Link>
+          <Link href="/orders">Orders</Link> */}
           <SignOut />
           <Link href="/account">
             <button type="button">
