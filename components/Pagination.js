@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { perPage } from '../config';
 import ErrorMessage from './ErrorMessage';
 import PaginationStyles from './styles/PaginationStyles';
+import { NextPageSvg, PrevPageSvg } from './styles/Svg';
 
 // ------------------------------------Meta-Query
 
@@ -40,18 +41,22 @@ export default function Pagination({ page }) {
 
       {/* PREVIOUS PAGE */}
       <Link href={`/products/${page - 1}`}>
-        <a aria-disabled={page <= 1}>← Prev</a>
+        <a aria-disabled={page <= 1}>
+          <PrevPageSvg aria-disabled={page <= 1} />
+        </a>
       </Link>
 
       {/* CURRENT PAGE */}
       <p>
         Page {page} of {pageCount}
       </p>
-      <p> {count} Items Total</p>
+      {/* <p> {count} Items Total</p> */}
 
       {/* NEXT PAGE */}
       <Link href={`/products/${page + 1}`}>
-        <a aria-disabled={page >= pageCount}>Next →</a>
+        <a aria-disabled={page >= pageCount}>
+          <NextPageSvg />
+        </a>
       </Link>
     </PaginationStyles>
   );
