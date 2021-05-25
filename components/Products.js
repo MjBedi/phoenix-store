@@ -53,7 +53,8 @@ const ProductsListStyles = styled.div`
       1fr
     )
   );
-  gap: 3.6rem 2.6rem;
+  gap: 2.6rem 2.6rem;
+  margin: 2.6rem 0;
 `;
 
 // ------------------PRODUCTS COMPONENT------------------

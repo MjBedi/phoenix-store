@@ -23,23 +23,31 @@ const ItemStyles = styled.div`
   img {
     display: block;
     width: 100%;
+    height: 100%;
     max-height: 32rem;
     min-height: 14rem;
     object-fit: cover;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
   }
+
   p {
+    height: 100%;
+    max-height: 2.8rem;
     line-height: 2;
     font-weight: 300;
     flex-grow: 1;
     padding: 0 1rem;
-    font-size: clamp(1.3rem, 2vw, 1.8rem);
-    max-height: 3.6rem;
+    font-size: clamp(1.3rem, 1.8vw, 1.6rem);
     text-align: left;
 
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
   }
+
   .buttonList {
     background: snow;
     display: flex;
@@ -52,11 +60,12 @@ const ItemStyles = styled.div`
       margin: 0.2rem;
       font-size: clamp(1.2rem, 1.3vw, 1.6rem);
       padding: 0.8rem;
-    }
-    button:hover {
-      box-shadow: var(--bs);
-      transform: translateY(-1.5%);
-      background: hsl(6, 100%, 93%);
+
+      &:hover {
+        box-shadow: var(--bs);
+        transform: translateY(-1.5%);
+        background: hsl(6, 100%, 93%);
+      }
     }
 
     & > * {
