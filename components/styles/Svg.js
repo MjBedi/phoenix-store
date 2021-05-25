@@ -87,6 +87,83 @@ export const AccountSvg = () => (
   </svg>
 );
 
+export const NextPageSvg = () => (
+  // Orion Icon Library
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 64 64"
+    aria-describedby="desc"
+    role="img"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+    width="38"
+    height="38"
+    className="pagination-btn pagination-btn--right"
+  >
+    <title>Next Page</title>
+    <desc>A line styled icon for going to the Next page.</desc>
+    <circle
+      data-name="layer2"
+      cx="32"
+      cy="32"
+      r="30"
+      fill="none"
+      stroke="#202020"
+      strokeMiterlimit="10"
+      strokeWidth="2"
+      strokeLinejoin="round"
+      strokeLinecap="round"
+    />
+    <path
+      data-name="layer1"
+      fill="none"
+      stroke="#202020"
+      strokeMiterlimit="10"
+      strokeWidth="2"
+      d="M14.002 32.002h35M36 21l13 11-13 11"
+      strokeLinejoin="round"
+      strokeLinecap="round"
+    />
+  </svg>
+);
+
+export const PrevPageSvg = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 64 64"
+    aria-describedby="desc"
+    role="img"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+    width="38"
+    height="38"
+    className="pagination-btn pagination-btn--left"
+  >
+    <title>Previous Page</title>
+    <desc>A line styled icon for going to the Previous page.</desc>
+    <circle
+      data-name="layer2"
+      cx="32"
+      cy="32"
+      r="30"
+      fill="none"
+      stroke="#202020"
+      strokeMiterlimit="10"
+      strokeWidth="2"
+      strokeLinejoin="round"
+      strokeLinecap="round"
+    />
+    <path
+      data-name="layer1"
+      fill="none"
+      stroke="#202020"
+      strokeMiterlimit="10"
+      strokeWidth="2"
+      d="M49.998 32.002h-35M28 21L15 32l13 11"
+      strokeLinejoin="round"
+      strokeLinecap="round"
+    />
+  </svg>
+);
+
 // {/* <svg
 //   fill="none"
 //   viewBox="0 0 24 29"
