@@ -1,7 +1,7 @@
 export const SearchSvg = () => (
   <svg
-    width="24"
-    height="24"
+    width="23"
+    height="22"
     xmlns="http://www.w3.org/2000/svg"
     fillRule="evenodd"
     clipRule="evenodd"
@@ -12,8 +12,8 @@ export const SearchSvg = () => (
 
 export const CartSvg = () => (
   <svg
-    width="25px"
-    height="24px"
+    width="23px"
+    height="22px"
     viewBox="0 0 21 20"
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"
@@ -58,8 +58,8 @@ export const CartSvg = () => (
 
 export const AccountSvg = () => (
   <svg
-    width="25px"
-    height="24px"
+    width="23px"
+    height="22px"
     viewBox="0 0 20 20"
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"

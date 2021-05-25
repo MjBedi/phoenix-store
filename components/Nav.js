@@ -2,17 +2,9 @@ import Link from 'next/link';
 import { useCart } from '../lib/cartState';
 import CartCounter from './CartCounter';
 import SignOut from './SignOut';
+import { NavDropdownStyles, NavStyles } from './styles/NavStyles';
 import { AccountSvg, CartSvg, SearchSvg } from './styles/Svg';
-import NavStyles from './styles/NavStyles';
 import { useUser } from './User';
-
-// const NavStyles = styled.nav`
-//   background: mistyrose;
-//   display: flex;
-//   align-content: center;
-//   justify-content: space-around;
-//   font-size: 2.4rem;
-// `;
 
 export default function Nav() {
   // Check if the User is Present or else Returns NULL
@@ -29,8 +21,13 @@ export default function Nav() {
           <Link href="/orders">Orders</Link> */}
           <SignOut />
           <Link href="/account">
-            <button type="button">
+            <button type="button" className="account">
               <AccountSvg />
+              {/* <NavDropdownStyles>
+                <li>Sell</li>
+                <li>Orders</li>
+                <li>Sign Out</li>
+              </NavDropdownStyles> */}
             </button>
           </Link>
           <button type="button" onClick={openCart}>

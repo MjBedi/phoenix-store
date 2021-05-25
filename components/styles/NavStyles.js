@@ -1,12 +1,25 @@
 import styled from 'styled-components';
 
-const NavStyles = styled.ul`
+const NavDropdownStyles = styled.ul`
+  display: block;
+  position: relative;
+  background-color: var(--litThree);
+  text-decoration: none;
+  border-bottom-left-radius: 0.6rem;
+  border-bottom-right-radius: 0.6rem;
+  left: 0;
+  top: 100%;
+  z-index: 200000;
+`;
+
+const NavStyles = styled.nav`
   margin: 0;
   padding: 0;
   display: flex;
   justify-self: end;
   white-space: nowrap;
   /* font-size: 2rem; */
+
   a,
   button {
     padding: clamp(1.4rem, 1.8vh, 2.6rem) clamp(1rem, 1.4vw, 2rem);
@@ -16,25 +29,12 @@ const NavStyles = styled.ul`
     text-transform: uppercase;
     font-weight: 900;
     font-size: clamp(1.6rem, 2vw, 2rem);
-    /* font-size: 2.4rem; */
     background: none;
     border: 0;
     cursor: pointer;
     /* @media (max-width: 700px) {
       font-size: 10px;
       padding: 0 10px;
-    } */
-
-    /* &:before {
-      content: '';
-      width: 2px;
-      background: var(--lightgray);
-      height: 100%;
-      left: 0;
-      position: absolute;
-      transform: skew(-20deg);
-      top: 0;
-      bottom: 0;
     } */
 
     &:after {
@@ -55,13 +55,21 @@ const NavStyles = styled.ul`
       text-decoration: none;
       &:after {
         width: 80%;
-        /* width: calc(100% - 60px); */
       }
-      /* @media (max-width: 700px) {
-        width: calc(100% - 10px);
-      } */
     }
+
+    /* .account {
+      position: relative;
+
+      :hover ${NavDropdownStyles} {
+        display: block;
+        div {
+          display: block;
+        }
+      }
+    } */
   }
+
   /* @media (max-width: 1300px) {
     border-top: 1px solid var(--lightGray);
     width: 100%;
@@ -70,4 +78,4 @@ const NavStyles = styled.ul`
   } */
 `;
 
-export default NavStyles;
+export { NavStyles, NavDropdownStyles };
