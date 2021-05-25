@@ -7,6 +7,8 @@ import Search from './Search';
 // ------------------STYLED COMPONENTS------------------
 
 const HeaderStyles = styled.header`
+  margin-bottom: 2.2rem;
+
   .bar {
     display: flex;
     flex-flow: row nowrap;
@@ -16,14 +18,6 @@ const HeaderStyles = styled.header`
     overflow: hidden;
     justify-content: space-between;
     /* border-bottom: 0.8rem solid var(--black,#000); */
-
-    /* display: grid;
-    grid-template-columns: 1fr auto;
-    grid-gap: 2rem;
-    padding: 0 2rem;
-    justify-content: space-around;
-    border-bottom: 0.8rem solid var(--black, #000);
-    overflow: hidden; */
   }
 
   .sub-bar {
