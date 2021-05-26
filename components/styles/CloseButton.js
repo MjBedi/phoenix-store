@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 
 const CloseButton = styled.button`
-  background: black;
-  color: white;
-  font-size: 3rem;
+  background: none;
+  font-size: 4rem;
   border: 0;
   position: absolute;
   z-index: 2;
-  right: 1.4rem;
+  right: 16px;
   cursor: pointer;
+  top: 7px;
   &:hover {
     color: var(--purple);
   }

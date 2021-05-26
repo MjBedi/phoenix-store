@@ -13,10 +13,10 @@ const ItemStyles = styled.div`
     content: '';
     background: var(--primary);
     position: absolute;
-    top: -5px;
-    left: -5px;
-    width: calc(100% + 10px);
-    height: calc(100% + 10px);
+    top: -4px;
+    left: -4px;
+    width: calc(100% + 8px);
+    height: calc(100% + 8px);
     z-index: -1;
   }
 
