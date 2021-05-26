@@ -1,13 +1,15 @@
 import styled from 'styled-components';
 
 const Supreme = styled.h3`
-  background: var(--primary);
-  color: white;
-  display: inline-block;
-  padding: 4px 5px;
-  /* transform: skew(-8deg); */
+  display: block;
   margin: 0;
-  font-size: 3rem;
+  font-size: 2.8rem;
+  background-image: linear-gradient(315deg, #ff8080, #b080ff);
+  background-size: 100%;
+  background-clip: text;
+  -webkit-background-image: linear-gradient(315deg, #ff8080, #b080ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 `;
 
 export default Supreme;
