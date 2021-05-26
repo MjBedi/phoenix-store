@@ -8,7 +8,7 @@ const PaginationStyles = styled.div`
   justify-content: center;
   align-content: center;
   margin: 1.4rem 0;
-  font-size: clamp(1.6rem, 1.8vw, 1.7rem);
+  font-size: clamp(1.5rem, 1.8vw, 1.7rem);
   white-space: nowrap;
   /* border: 1px solid var(--lightgrey);
   border-radius: 10px; */
@@ -23,7 +23,6 @@ const PaginationStyles = styled.div`
     }
   }
   a[aria-disabled='true'] {
-    color: grey;
     pointer-events: none;
   }
 

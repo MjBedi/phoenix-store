@@ -42,7 +42,7 @@ export default function Pagination({ page }) {
       {/* PREVIOUS PAGE */}
       <Link href={`/products/${page - 1}`}>
         <a aria-disabled={page <= 1}>
-          <PrevPageSvg aria-disabled={page <= 1} />
+          <PrevPageSvg stroke={page <= 1 ? '#afafaf' : '#8b42ff'} />
         </a>
       </Link>
 
@@ -55,7 +55,7 @@ export default function Pagination({ page }) {
       {/* NEXT PAGE */}
       <Link href={`/products/${page + 1}`}>
         <a aria-disabled={page >= pageCount}>
-          <NextPageSvg />
+          <NextPageSvg stroke={page >= pageCount ? '#afafaf' : '#8b42ff'} />
         </a>
       </Link>
     </PaginationStyles>
