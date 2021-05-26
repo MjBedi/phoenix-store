@@ -3,14 +3,13 @@ import styled from 'styled-components';
 const CartStyles = styled.div`
   padding: 20px;
   position: relative;
-  background: white;
+  background: var(--litOne);
   position: fixed;
   height: 100%;
   top: 0;
   right: 0;
-  /* width: 40%;
-  min-width: 500px; */
-  min-width: 35%;
+  width: 35vw;
+  min-width: 360px;
   bottom: 0;
   transform: translateX(100%);
   transition: all 0.3s;
@@ -20,7 +19,7 @@ const CartStyles = styled.div`
   grid-template-rows: auto 1fr auto;
   ${(props) => props.open && `transform: translateX(0);`};
   header {
-    border-bottom: 5px solid var(--black);
+    border-bottom: 4px solid var(--lightred);
     margin-bottom: 2rem;
     padding-bottom: 2rem;
   }
@@ -51,14 +50,15 @@ const CartStyles = styled.div`
     align-items: center;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
       Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 3rem;
+    font-size: 2.8rem;
+    font-style: italic;
 
     button {
       border: 0;
       background: none;
       cursor: pointer;
       text-decoration: none;
-      font-size: 2.6rem;
+      font-size: 2.5rem;
       /* Text Background Gradience */
       background-image: linear-gradient(315deg, #ff8080, #b080ff);
       background-size: 100%;
