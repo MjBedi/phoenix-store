@@ -87,7 +87,7 @@ export const AccountSvg = () => (
   </svg>
 );
 
-export const NextPageSvg = () => (
+export const NextPageSvg = ({ stroke }) => (
   // Orion Icon Library
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -107,7 +107,7 @@ export const NextPageSvg = () => (
       cy="32"
       r="30"
       fill="none"
-      stroke="#202020"
+      stroke={stroke}
       strokeMiterlimit="10"
       strokeWidth="2"
       strokeLinejoin="round"
@@ -116,7 +116,7 @@ export const NextPageSvg = () => (
     <path
       data-name="layer1"
       fill="none"
-      stroke="#202020"
+      stroke={stroke}
       strokeMiterlimit="10"
       strokeWidth="2"
       d="M14.002 32.002h35M36 21l13 11-13 11"
@@ -126,7 +126,7 @@ export const NextPageSvg = () => (
   </svg>
 );
 
-export const PrevPageSvg = () => (
+export const PrevPageSvg = ({ stroke }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 64 64"
@@ -145,7 +145,7 @@ export const PrevPageSvg = () => (
       cy="32"
       r="30"
       fill="none"
-      stroke="#202020"
+      stroke={stroke}
       strokeMiterlimit="10"
       strokeWidth="2"
       strokeLinejoin="round"
@@ -154,7 +154,7 @@ export const PrevPageSvg = () => (
     <path
       data-name="layer1"
       fill="none"
-      stroke="#202020"
+      stroke={stroke}
       strokeMiterlimit="10"
       strokeWidth="2"
       d="M49.998 32.002h-35M28 21L15 32l13 11"
