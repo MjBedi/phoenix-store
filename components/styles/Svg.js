@@ -95,8 +95,8 @@ export const NextPageSvg = ({ stroke }) => (
     aria-describedby="desc"
     role="img"
     xmlnsXlink="http://www.w3.org/1999/xlink"
-    width="38"
-    height="38"
+    width="40"
+    height="40"
     className="pagination-btn pagination-btn--right"
   >
     <title>Next Page</title>
@@ -133,8 +133,8 @@ export const PrevPageSvg = ({ stroke }) => (
     aria-describedby="desc"
     role="img"
     xmlnsXlink="http://www.w3.org/1999/xlink"
-    width="38"
-    height="38"
+    width="40"
+    height="40"
     className="pagination-btn pagination-btn--left"
   >
     <title>Previous Page</title>
