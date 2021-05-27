@@ -2,6 +2,7 @@ import { useQuery } from '@apollo/client';
 import gql from 'graphql-tag';
 import styled from 'styled-components';
 import Head from 'next/head';
+import { Breadcrumbs } from '../lib/breadcrumbs';
 import formatMoney from '../lib/formatMoney';
 import ErrorMessage from './ErrorMessage';
 
@@ -62,12 +63,14 @@ const ProductPageStyle = styled.div`
 // ------------------SINGLE-PRODUCT-PAGE COMPONENT------------------
 
 export default function SingleProduct({ id }) {
+  const breadcrumbs = Breadcrumbs();
+
   const { data, error, loading } = useQuery(SINGLE_PRODUCT_QUERY, {
     variables: {
       id,
     },
   });
-  console.log({ data, error, loading });
+  // console.log({ data, error, loading });
 
   if (loading) return <p>Loading...</p>;
   if (error) return <ErrorMessage error={error} />;
@@ -76,20 +79,24 @@ export default function SingleProduct({ id }) {
   const { Product } = data;
 
   return (
-    <ProductPageStyle>
-      {/* meta Head Tag -> page Title */}
-      <Head>
-        <title> Phoenix | {Product.name} </title>
-      </Head>
-      <img
-        src={Product?.photo?.image?.publicUrlTransformed}
-        alt={Product.photo.altText || Product.name}
-      />
-      <div className="details">
-        <h2>{Product.name}</h2>
-        <p className="price"> {formatMoney(Product.price)} </p>
-        <p>{Product.description}</p>
-      </div>
-    </ProductPageStyle>
+    <>
+      {breadcrumbs}
+      <ProductPageStyle>
+        {/* meta Head Tag -> page Title */}
+        <Head>
+          <title> Phoenix | {Product.name} </title>
+        </Head>
+
+        <img
+          src={Product?.photo?.image?.publicUrlTransformed}
+          alt={Product.photo.altText || Product.name}
+        />
+        <div className="details">
+          <h2>{Product.name}</h2>
+          <p className="price"> {formatMoney(Product.price)} </p>
+          <p>{Product.description}</p>
+        </div>
+      </ProductPageStyle>
+    </>
   );
 }
