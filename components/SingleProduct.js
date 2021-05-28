@@ -38,6 +38,10 @@ const ProductPageStyle = styled.div`
   max-width: var(--max-width);
   /* height: 100vh; */
 
+  & > * {
+    padding: 0 1.5rem;
+  }
+
   img {
     width: 100%;
   }
@@ -45,17 +49,16 @@ const ProductPageStyle = styled.div`
   div {
     display: grid;
     grid-auto-rows: max-content;
-    background-color: var(--lightgrey);
+    background-color: var(--litTwo);
 
     h2 {
-      padding: 0 1rem;
+      /* padding: 0 1rem; */
     }
 
     .price {
       width: fit-content;
-      padding: 0 1rem;
+      /* padding: 0 1rem; */
       background-color: var(--primary);
-      color: #fff;
     }
   }
 `;
