@@ -1,7 +1,7 @@
 export const SearchSvg = () => (
   <svg
-    width="23"
-    height="22"
+    width="21"
+    height="21"
     xmlns="http://www.w3.org/2000/svg"
     fillRule="evenodd"
     clipRule="evenodd"
@@ -12,8 +12,8 @@ export const SearchSvg = () => (
 
 export const CartSvg = () => (
   <svg
-    width="23px"
-    height="22px"
+    width="21px"
+    height="20px"
     viewBox="0 0 21 20"
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"
@@ -58,8 +58,8 @@ export const CartSvg = () => (
 
 export const AccountSvg = () => (
   <svg
-    width="23px"
-    height="22px"
+    width="21px"
+    height="20px"
     viewBox="0 0 20 20"
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"
@@ -160,6 +160,25 @@ export const PrevPageSvg = ({ stroke }) => (
       d="M49.998 32.002h-35M28 21L15 32l13 11"
       strokeLinejoin="round"
       strokeLinecap="round"
+    />
+  </svg>
+);
+
+export const TakeAwaySvg = () => (
+  <svg
+    viewBox="0 0 16 16"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    width="16"
+    height="16"
+  >
+    <path
+      d="M15 0H8v2h4.6L6.3 8.3l1.4 1.4L14 3.4V8h2V1c0-.6-.4-1-1-1z"
+      fill="currentColor"
+    />
+    <path
+      d="M14 16H1c-.6 0-1-.4-1-1V2c0-.6.4-1 1-1h4v2H2v11h11v-3h2v4c0 .6-.4 1-1 1z"
+      fill="currentColor"
     />
   </svg>
 );
