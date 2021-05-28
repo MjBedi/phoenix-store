@@ -38,10 +38,10 @@ const ItemStyles = styled.div`
     height: 100%;
     max-height: 2.8rem;
     line-height: 2;
-    font-weight: 300;
+    font-weight: 400;
     flex-grow: 1;
     padding: 0 1rem;
-    font-size: clamp(1.3rem, 1.8vw, 1.6rem);
+    font-size: clamp(1.4rem, 1.8vw, 1.6rem);
     text-align: left;
 
     overflow: hidden;

@@ -48,6 +48,7 @@ const OrderItemStyles = styled.li`
       margin: 0;
       background: var(--litTwo);
       padding: 1rem 0;
+      font-weight: 400;
     }
     strong {
       display: block;

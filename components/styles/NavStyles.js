@@ -27,7 +27,7 @@ const NavStyles = styled.nav`
     align-items: center;
     position: relative;
     text-transform: uppercase;
-    font-weight: 900;
+    font-weight: 500;
     font-size: clamp(1.6rem, 2vw, 2rem);
     background: none;
     border: 0;

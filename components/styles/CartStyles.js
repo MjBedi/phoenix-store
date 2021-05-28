@@ -48,9 +48,9 @@ const CartStyles = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
-      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 2.8rem;
+    font-size: 2.6rem;
+    font-weight: 400;
+    line-height: 1;
     font-style: italic;
 
     button {
