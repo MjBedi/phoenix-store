@@ -41,7 +41,7 @@ html{
 }
 
 body{
-  font-family: 'radnika_next',--apple-system, BlinkMacSystemFont,  'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: --apple-system, BlinkMacSystemFont,  'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin: 0;
   padding: 0;
   font-size: 2rem;
@@ -52,6 +52,7 @@ body{
 a{
   text-decoration: none;
   color: var(--black);
+  font-weight: 500;
 }
 
 a:hover{
@@ -59,7 +60,12 @@ a:hover{
 }
 
 button {
-  font-family: 'radnika_next',--apple-system, BlinkMacSystemFont,  'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: --apple-system, BlinkMacSystemFont,  'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+}
+
+p {
+  font-weight: 500;
 }
 `;
 
