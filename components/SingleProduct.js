@@ -5,6 +5,7 @@ import Head from 'next/head';
 import { Breadcrumbs } from '../lib/breadcrumbs';
 import formatMoney from '../lib/formatMoney';
 import ErrorMessage from './ErrorMessage';
+import AddToCart from './AddToCart';
 
 // ------------------------------------Query
 
@@ -31,34 +32,69 @@ export const SINGLE_PRODUCT_QUERY = gql`
 // ------------------STYLED COMPONENTS------------------
 
 const ProductPageStyle = styled.div`
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 3rem;
+  display: flex;
+  gap: 2.4rem;
   max-width: var(--max-width);
-  /* height: 100vh; */
+  flex-direction: column;
+  margin-bottom: 10vh;
 
   & > * {
-    padding: 0 1.5rem;
+    /* padding: 0 1.5rem; */
   }
 
   img {
     width: 100%;
+    height: auto;
+    max-height: 50vh;
+    object-fit: contain;
   }
 
-  div {
-    display: grid;
-    grid-auto-rows: max-content;
+  .details {
+    display: flex;
     background-color: var(--litTwo);
+    padding: 2rem 2rem;
+    border-radius: 1rem;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1rem;
 
     h2 {
-      /* padding: 0 1rem; */
+      font-weight: 500;
+      border-bottom: 2px solid var(--litOne);
+    }
+
+    .description {
+      color: var(--grey);
+      text-align: justify;
+      font-style: italic;
     }
 
     .price {
+      padding: 0.8rem 4rem;
       width: fit-content;
+      border-radius: 0.6rem;
+      background: var(--litOne);
       /* padding: 0 1rem; */
-      background-color: var(--primary);
+    }
+
+    button {
+      border: 0;
+      background: var(--lightred);
+      border-radius: 0.5rem;
+      color: #fff;
+      cursor: pointer;
+      margin: 0.2rem;
+      padding: 0.8rem 4rem;
+      font-size: 2rem;
+      box-shadow: 0px 6px 7px 0px rgb(0 0 0 / 10%);
+
+      &:hover {
+        transition: all 240ms;
+        box-shadow: 0px 12px 14px 0px rgb(0 0 0 / 10%);
+        transform: translateY(-1.6%);
+        background: hsl(0, 100%, 72%);
+      }
     }
   }
 `;
@@ -95,9 +131,15 @@ export default function SingleProduct({ id }) {
           alt={Product.photo.altText || Product.name}
         />
         <div className="details">
-          <h2>{Product.name}</h2>
+          <div>
+            <h2>{Product.name}</h2>
+            <p className="description">
+              {Product.description} lorem ipsum, dolor sit amet consectetur
+              adipisicing elit. Repellendus, quibusdam!
+            </p>
+          </div>
           <p className="price"> {formatMoney(Product.price)} </p>
-          <p>{Product.description}</p>
+          <AddToCart id={Product.id} />
         </div>
       </ProductPageStyle>
     </>
