@@ -22,8 +22,7 @@ const DropDownItem = styled.div`
   ${(props) => (props.highlighted ? 'padding-left: 2rem;' : null)};
   display: flex;
   align-items: center;
-  border-left: 6px solid
-    ${(props) => (props.highlighted ? props.theme.lightgrey : 'white')};
+  border-left: 6px solid ${(props) => (props.highlighted ? '#b080ff' : 'white')};
   img {
     margin-right: 10px;
   }
@@ -43,7 +42,8 @@ const SearchStyles = styled.div`
   position: relative;
   margin: 0.4rem 0;
   input {
-    width: 90vw;
+    width: 95%;
+    max-width: var(--maxwidth);
     padding: clamp(1rem, 1vh, 2.6rem) clamp(1rem, 1.4vw, 2rem);
     border: 0;
     font-size: clamp(1.6rem, 1.8vw, 2rem);
