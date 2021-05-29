@@ -88,6 +88,7 @@ export default function Search() {
             placeholder: 'Search for an Item',
             id: 'search',
             className: loading ? 'loading' : '',
+            ariaLabel: 'Search',
           })}
         />
       </div>
