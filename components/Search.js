@@ -3,6 +3,7 @@ import { resetIdCounter, useCombobox } from 'downshift';
 import debounce from 'lodash/debounce';
 import { useRouter } from 'next/router';
 import { DropDown, DropDownItem, SearchStyles } from './styles/DropDown';
+import { SearchSvg } from './styles/Svg';
 
 // ------------------------------------Search-Query
 
@@ -55,11 +56,13 @@ export default function Search() {
     highlightedIndex,
     getComboboxProps,
     getInputProps,
+    getLabelProps,
     getMenuProps,
     getItemProps,
   } = useCombobox({
     // OPTIONS/METHODS
     items,
+
     // ----onChange----
     onInputValueChange() {
       // Waiting 1200 ms before running the Query a.k.a NotDDOSingUrOwnSite
@@ -67,12 +70,14 @@ export default function Search() {
         variables: { searchTerm: inputValue },
       });
     },
+
     // ----onSelect----
     onSelectedItemChange({ selectedItem }) {
       router.push({
         pathname: `/product/${selectedItem.id}`,
       });
     },
+
     // Changes [object, Object] i.e. ({someObject}).toString
     itemToString: (item) => (item ? item.name : ''),
   });
@@ -82,15 +87,25 @@ export default function Search() {
   return (
     <SearchStyles>
       <div {...getComboboxProps()}>
-        <input
-          {...getInputProps({
-            type: 'search',
-            placeholder: 'Search for an Item',
-            id: 'search',
-            className: loading ? 'loading' : '',
-            ariaLabel: 'Search',
-          })}
-        />
+        <div className="inputBox">
+          {/* <label
+            htmlFor="search"
+            {...getLabelProps({
+              htmlFor: 'search',
+            })}
+          >
+          </label> */}
+          <SearchSvg />
+          <input
+            aria-label="Search Bar"
+            {...getInputProps({
+              type: 'search',
+              placeholder: 'Search for an Item',
+              id: 'search',
+              className: loading ? 'loading' : '',
+            })}
+          />
+        </div>
       </div>
       <DropDown {...getMenuProps()}>
         {isOpen && loading ? (
@@ -99,8 +114,8 @@ export default function Search() {
           isOpen &&
           items.map((item, index) => (
             <DropDownItem
+              {...getItemProps({ item, index })}
               key={item?.id}
-              {...getItemProps({ item })}
               highlighted={index === highlightedIndex}
             >
               <img
