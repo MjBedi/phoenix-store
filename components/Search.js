@@ -56,7 +56,6 @@ export default function Search() {
     highlightedIndex,
     getComboboxProps,
     getInputProps,
-    getLabelProps,
     getMenuProps,
     getItemProps,
   } = useCombobox({
@@ -88,13 +87,6 @@ export default function Search() {
     <SearchStyles>
       <div {...getComboboxProps()}>
         <div className="inputBox">
-          {/* <label
-            htmlFor="search"
-            {...getLabelProps({
-              htmlFor: 'search',
-            })}
-          >
-          </label> */}
           <SearchSvg />
           <input
             aria-label="Search Bar"
