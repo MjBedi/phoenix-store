@@ -68,6 +68,7 @@ const ProductPageStyle = styled.div`
       color: var(--grey);
       text-align: justify;
       font-style: italic;
+      font-weight: normal;
     }
 
     .price {
