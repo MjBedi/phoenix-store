@@ -13,25 +13,32 @@ const loading = keyframes`
 `;
 
 const Form = styled.form`
-  box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 5px 3px rgb(0 0 0 / 5%);
   background: var(--litTwo);
-  border: 5px solid var(--litThree);
+  /* border: 5px solid var(--litThree); */
   border-radius: 1rem;
-  padding: 20px;
+  padding: 2rem 2.5rem;
   font-size: clamp(1.8rem, 2.5vw, 2.1rem);
-  line-height: 1.5;
-  font-weight: 600;
+  line-height: 1.8;
+  font-weight: 500;
   label {
     display: block;
-    margin-bottom: 1rem;
+    margin-bottom: 1.6rem;
   }
+
+  h2 {
+    font-size: clamp(2.2rem, 3vw, 2.6rem);
+  }
+
   input,
   textarea,
   select {
     width: 100%;
     padding: 0.5rem;
     font-size: clamp(1.5rem, 2vw, 1.8rem);
-    border: 1px solid black;
+    border: 1px solid #fee;
+    border-radius: 0.6rem;
+    line-height: 1.8;
     &:focus {
       outline: 0;
       border-color: var(--purple);
@@ -42,9 +49,10 @@ const Form = styled.form`
     width: auto;
     background: var(--purple);
     color: white;
+    margin: 1.6rem 0;
     border: 0;
     border-radius: 0.6rem;
-    font-size: 1.8rem;
+    font-size: 2rem;
     font-weight: 600;
     padding: 0.5rem 1.2rem;
 
@@ -64,6 +72,7 @@ const Form = styled.form`
       height: 8px;
       content: '';
       display: block;
+      margin-bottom: 2.2rem;
       background-image: linear-gradient(
         to right,
         #b080ff 0%,
