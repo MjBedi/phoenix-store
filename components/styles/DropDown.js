@@ -80,8 +80,10 @@ const SearchStyles = styled.div`
       animation: ${glow} 1s ease-in-out infinite alternate;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
       box-shadow: var(--bs);
+      transition: all 240ms ease-in-out;
     }
   }
 `;
