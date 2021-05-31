@@ -1,5 +1,6 @@
 import { useMutation } from '@apollo/client';
 import gql from 'graphql-tag';
+import { useRouter } from 'next/router';
 import useForm from '../lib/useForm';
 import ErrorMessage from './ErrorMessage';
 import Form from './styles/Form';
@@ -24,6 +25,7 @@ export const SIGN_UP_MUTATION = gql`
 // ------------------SIGN-IN COMPONENT------------------
 
 export default function SignUp() {
+  const router = useRouter();
   // ----useForm Hook----
 
   const { inputs, handleChange, resetForm } = useForm({
@@ -48,18 +50,13 @@ export default function SignUp() {
     const res = await signUp().catch(console.error);
     console.log(`res`, res);
     console.log({ data, loading, error });
-    // TODO: MAKESHIFT
-    // if (data?.authenticateUserWithPassword.sessionToken) {
-    //   // set cookie
-    //   // cookie.set('token', data.token, {expires: 2});
-    //   Router.push('/');
-    // }
     resetForm();
-    // Push to the Product Page
-    // Router.push({
-    //   pathname: `/product/${res.data.createProduct.id}`,
-    // });
-    // ../pages/product/[id].js --> SLUG Page return's { query } PROPS
+    // Push to the Sign-In Page
+    if (!error) {
+      await router.push({
+        pathname: `/signin`,
+      });
+    }
   };
 
   return (
@@ -81,7 +78,7 @@ export default function SignUp() {
           <input
             type="name"
             name="name"
-            placeholder="Enter Your Name"
+            placeholder="enter your name"
             autoComplete="name"
             value={inputs.name}
             onChange={handleChange}
@@ -93,7 +90,7 @@ export default function SignUp() {
           <input
             type="email"
             name="email"
-            placeholder="Your Email Address"
+            placeholder="your email address"
             autoComplete="email"
             value={inputs.email}
             onChange={handleChange}
@@ -105,7 +102,7 @@ export default function SignUp() {
           <input
             type="password"
             name="password"
-            placeholder="Password"
+            placeholder="password"
             autoComplete="password"
             value={inputs.password}
             onChange={handleChange}

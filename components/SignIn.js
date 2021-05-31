@@ -1,5 +1,6 @@
 import { useMutation } from '@apollo/client';
 import gql from 'graphql-tag';
+import { useRouter } from 'next/router';
 import useForm from '../lib/useForm';
 import ErrorMessage from './ErrorMessage';
 import Form from './styles/Form';
@@ -29,6 +30,7 @@ export const SIGN_IN_MUTATION = gql`
 // ------------------SIGN-IN COMPONENT------------------
 
 export default function SignIn() {
+  const router = useRouter();
   // ----useForm Hook----
 
   const { inputs, handleChange, resetForm } = useForm({
@@ -66,11 +68,12 @@ export default function SignIn() {
     //   Router.push('/');
     // }
     resetForm();
+
     // Push to the Product Page
-    // Router.push({
-    //   pathname: `/product/${res.data.createProduct.id}`,
-    // });
-    // ../pages/product/[id].js --> SLUG Page return's { query } PROPS
+
+    router.push({
+      pathname: '/products',
+    });
   };
 
   return (
@@ -84,7 +87,7 @@ export default function SignIn() {
           <input
             type="email"
             name="email"
-            placeholder="Your Email Address"
+            placeholder="your email address"
             autoComplete="email"
             value={inputs.email}
             onChange={handleChange}
@@ -96,7 +99,7 @@ export default function SignIn() {
           <input
             type="password"
             name="password"
-            placeholder="Password"
+            placeholder="password"
             autoComplete="password"
             value={inputs.password}
             onChange={handleChange}
