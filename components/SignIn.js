@@ -31,6 +31,7 @@ export const SIGN_IN_MUTATION = gql`
 
 export default function SignIn() {
   const router = useRouter();
+
   // ----useForm Hook----
 
   const { inputs, handleChange, resetForm } = useForm({
@@ -60,20 +61,16 @@ export default function SignIn() {
     e.preventDefault();
     // Submit the inputfields to the backend:
     const res = await signIn();
-    console.log(`res`, res);
-    // TODO: MAKESHIFT
-    // if (data?.authenticateUserWithPassword.sessionToken) {
-    //   // set cookie
-    //   // cookie.set('token', data.token, {expires: 2});
-    //   Router.push('/');
-    // }
+    // console.log(`res→`, res);
     resetForm();
 
     // Push to the Product Page
 
-    router.push({
-      pathname: '/products',
-    });
+    if (res?.data?.authenticateUserWithPassword?.sessionToken) {
+      router.push({
+        pathname: '/products',
+      });
+    }
   };
 
   return (
@@ -99,7 +96,7 @@ export default function SignIn() {
           <input
             type="password"
             name="password"
-            placeholder="password"
+            placeholder="minimum 8 characters"
             autoComplete="password"
             value={inputs.password}
             onChange={handleChange}
