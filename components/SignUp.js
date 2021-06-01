@@ -1,6 +1,7 @@
 import { useMutation } from '@apollo/client';
 import gql from 'graphql-tag';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 import useForm from '../lib/useForm';
 import ErrorMessage from './ErrorMessage';
 import Form from './styles/Form';
@@ -26,6 +27,7 @@ export const SIGN_UP_MUTATION = gql`
 
 export default function SignUp() {
   const router = useRouter();
+
   // ----useForm Hook----
 
   const { inputs, handleChange, resetForm } = useForm({
@@ -48,12 +50,13 @@ export default function SignUp() {
     e.preventDefault();
     // Submit the inputfields to the backend:
     const res = await signUp().catch(console.error);
-    console.log(`res`, res);
-    console.log({ data, loading, error });
+    // console.log(`res`, res);
+    // console.log({ data, loading, error });
     resetForm();
+
     // Push to the Sign-In Page
-    if (!error) {
-      await router.push({
+    if (res?.data?.createUser) {
+      router.push({
         pathname: `/signin`,
       });
     }
@@ -66,7 +69,7 @@ export default function SignUp() {
       {data?.createUser ? (
         <p>
           Welcome <span>{data?.createUser.name}</span> !! You can now <br />
-          Sign Into Your Account
+          <Link href="/signin">Sign Into Your Account</Link>
         </p>
       ) : (
         <h2>Create An Account</h2>
