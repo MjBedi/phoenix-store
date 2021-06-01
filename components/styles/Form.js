@@ -87,7 +87,7 @@ const Form = styled.form`
   }
 
   span {
-    border-bottom: 2px var(--purple) solid;
+    font-weight: bold;
   }
 `;
 
