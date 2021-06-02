@@ -9,6 +9,10 @@ const ItemStyles = styled.div`
   flex-direction: column;
   justify-content: flex-end;
 
+  @media (max-width: 484px) {
+    flex-direction: row;
+  }
+
   &:before {
     content: '';
     background: var(--primary);
@@ -32,48 +36,72 @@ const ItemStyles = styled.div`
     right: 0;
     top: 0;
     cursor: pointer;
+
+    @media (max-width: 484px) {
+      max-width: 48%;
+      max-height: 20rem;
+      min-height: 18rem;
+    }
   }
 
-  p {
-    height: 100%;
-    max-height: 2.8rem;
-    line-height: 2;
-    font-weight: 400;
-    flex-grow: 1;
-    padding: 0 1rem;
-    font-size: clamp(1.4rem, 1.8vw, 1.6rem);
-    text-align: left;
+  .media {
+    width: 100%;
 
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
+    p {
+      height: 100%;
+      max-height: 2.8rem;
+      line-height: 2;
+      font-weight: 400;
+      flex-grow: 1;
+      padding: 0 1rem;
+      font-size: clamp(1.4rem, 1.8vw, 1.6rem);
+      text-align: center;
 
-  .buttonList {
-    background: snow;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
 
-    button {
-      cursor: pointer;
-      flex: 1 1 100px;
-      margin: 0.2rem;
-      font-size: clamp(1.2rem, 1.3vw, 1.6rem);
-      padding: 0.8rem;
+    .buttonList {
+      background: snow;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
 
-      &:hover {
-        box-shadow: var(--bs);
-        transform: translateY(-1.5%);
-        background: hsl(6, 100%, 93%);
+      button {
+        cursor: pointer;
+        flex: 1 1 100px;
+        margin: 0.2rem;
+        font-size: clamp(1.2rem, 1.3vw, 1.6rem);
+        padding: 0.8rem;
+
+        &:hover {
+          box-shadow: var(--bs);
+          transform: translateY(-1.5%);
+          background: hsl(6, 100%, 93%);
+        }
+      }
+
+      & > * {
+        background: mistyrose;
+        border: 0;
+        font-size: 1.3rem;
+        padding: 1rem;
       }
     }
 
-    & > * {
-      background: mistyrose;
-      border: 0;
-      font-size: 1.3rem;
-      padding: 1rem;
+    @media (max-width: 484px) {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: space-between;
+
+      p {
+        white-space: normal;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+      }
     }
   }
 `;
