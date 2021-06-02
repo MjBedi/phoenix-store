@@ -17,7 +17,6 @@ const HeaderStyles = styled.header`
     padding: 0 2rem;
     overflow: hidden;
     justify-content: space-between;
-    /* border-bottom: 0.8rem solid var(--black,#000); */
   }
 
   .sub-bar {
@@ -48,8 +47,6 @@ const Logo = styled.h1`
   white-space: nowrap;
 
   a {
-    /* padding: 0.4rem 1rem;
-    margin-left: 2rem; */
     text-decoration: none;
     text-transform: uppercase;
     font-weight: bold;
