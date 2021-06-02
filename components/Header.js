@@ -21,7 +21,7 @@ const HeaderStyles = styled.header`
   }
 
   .sub-bar {
-    border-bottom: 0.1rem solid var(--black, #000);
+    border-bottom: 1px solid rgba(111, 111, 111, 0.22);
 
     div {
       text-align: center;
@@ -44,7 +44,6 @@ const loading = keyframes`
 const Logo = styled.h1`
   font-size: clamp(2.4rem, 3.2vw, 3.8rem);
   position: relative;
-  /* transform: skew(-10deg); */
   z-index: 2;
   white-space: nowrap;
 
