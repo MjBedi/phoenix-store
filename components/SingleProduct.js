@@ -60,6 +60,7 @@ const ProductPageStyle = styled.div`
     gap: 1rem;
 
     h2 {
+      font-size: clamp(2.4rem, 2.8vw, 3rem);
       font-weight: 500;
       border-bottom: 2px solid var(--litOne);
     }
@@ -67,6 +68,7 @@ const ProductPageStyle = styled.div`
     .description {
       color: var(--grey);
       text-align: justify;
+      font-size: clamp(1.8rem, 2vw, 2rem);
       font-style: italic;
       font-weight: normal;
     }
