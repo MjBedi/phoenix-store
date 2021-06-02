@@ -19,27 +19,29 @@ const Product = ({ product }) => {
         />
       </Link>
 
-      <Title>
-        <Link href={`/product/${product.id}`}>{product.name}</Link>
-      </Title>
+      <div className="media">
+        <Title>
+          <Link href={`/product/${product.id}`}>{product.name}</Link>
+        </Title>
 
-      <PriceTag> {formatMoney(product.price)} </PriceTag>
-      <p> {product.description} </p>
-      <div className="buttonList">
-        {me ? (
-          <>
-            <Link
-              href={{
-                pathname: '/update',
-                query: { id: product.id },
-              }}
-            >
-              <button type="button">Edit</button>
-            </Link>
-            <DeleteProduct id={product.id}>Delete</DeleteProduct>
-          </>
-        ) : null}
-        <AddToCart id={product.id} />
+        <PriceTag> {formatMoney(product.price)} </PriceTag>
+        <p> {product.description} </p>
+        <div className="buttonList">
+          {me ? (
+            <>
+              <Link
+                href={{
+                  pathname: '/update',
+                  query: { id: product.id },
+                }}
+              >
+                <button type="button">Edit</button>
+              </Link>
+              <DeleteProduct id={product.id}>Delete</DeleteProduct>
+            </>
+          ) : null}
+          <AddToCart id={product.id} />
+        </div>
       </div>
     </ItemStyles>
   );
