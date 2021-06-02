@@ -55,6 +55,10 @@ const ProductsListStyles = styled.div`
   );
   gap: 2.6rem 2.6rem;
   margin: 2.6rem 0;
+
+  @media (max-width: 484px) {
+    grid-template-columns: none;
+  }
 `;
 
 // ------------------PRODUCTS COMPONENT------------------
