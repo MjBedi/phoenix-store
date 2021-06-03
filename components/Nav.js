@@ -3,7 +3,7 @@ import { useCart } from '../lib/cartState';
 import CartCounter from './CartCounter';
 import SignOut from './SignOut';
 import { NavDropdownStyles, NavStyles } from './styles/NavStyles';
-import { AccountSvg, CartSvg, SearchSvg } from './styles/Svg';
+import { AccountSvg, CartSvg } from './styles/Svg';
 import { useUser } from './User';
 
 export default function Nav() {
@@ -20,16 +20,18 @@ export default function Nav() {
           {/* <Link href="/sell">Sell</Link>
           <Link href="/orders">Orders</Link> */}
           <SignOut />
-          <Link href="/account">
-            <button type="button" className="account">
-              <AccountSvg />
-              {/* <NavDropdownStyles>
-                <li>Sell</li>
-                <li>Orders</li>
-                <li>Sign Out</li>
-              </NavDropdownStyles> */}
-            </button>
-          </Link>
+          <div className="relative">
+            <Link href="/account">
+              <button type="button">
+                <AccountSvg />
+              </button>
+            </Link>
+            <NavDropdownStyles>
+              <Link href="/sell">Sell</Link>
+              <Link href="/orders">Orders</Link>
+              <Link href="/signout">Sign Out</Link>
+            </NavDropdownStyles>
+          </div>
           <button type="button" onClick={openCart}>
             <CartSvg />
             <CartCounter
