@@ -7,16 +7,13 @@ const NavDropdownStyles = styled.div`
   text-decoration: none;
   padding: 1rem;
   border-radius: 0.6rem;
+  box-shadow: 0px 20px 20px 20px rgba(0, 0, 0, 0.1);
 
   a {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
     text-align: left;
-
-    /* &:hover {
-      
-    } */
   }
 `;
 
