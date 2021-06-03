@@ -63,7 +63,7 @@ const ItemStyles = styled.div`
     }
 
     .buttonList {
-      background: snow;
+      background: var(--litThree);
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -71,9 +71,10 @@ const ItemStyles = styled.div`
       button {
         cursor: pointer;
         flex: 1 1 100px;
-        margin: 0.2rem;
         font-size: clamp(1.2rem, 1.3vw, 1.6rem);
+        margin: 0.2rem;
         padding: 0.8rem;
+        border-radius: 0.6rem;
 
         &:hover {
           box-shadow: var(--bs);
