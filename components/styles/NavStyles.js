@@ -1,15 +1,23 @@
 import styled from 'styled-components';
 
-const NavDropdownStyles = styled.ul`
-  display: block;
-  position: relative;
-  background-color: var(--litThree);
+const NavDropdownStyles = styled.div`
+  display: none;
+  position: absolute;
+  background-color: var(--lightred);
   text-decoration: none;
-  border-bottom-left-radius: 0.6rem;
-  border-bottom-right-radius: 0.6rem;
-  left: 0;
-  top: 100%;
-  z-index: 200000;
+  padding: 1rem;
+  border-radius: 0.6rem;
+
+  a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+
+    /* &:hover {
+      
+    } */
+  }
 `;
 
 const NavStyles = styled.nav`
@@ -18,7 +26,15 @@ const NavStyles = styled.nav`
   display: flex;
   justify-self: end;
   white-space: nowrap;
-  /* font-size: 2rem; */
+
+  .relative {
+    align-self: center;
+
+    :hover ${NavDropdownStyles} {
+      display: block;
+      z-index: 10;
+    }
+  }
 
   a,
   button {
@@ -32,10 +48,6 @@ const NavStyles = styled.nav`
     background: none;
     border: 0;
     cursor: pointer;
-    /* @media (max-width: 700px) {
-      font-size: 10px;
-      padding: 0 10px;
-    } */
 
     &:after {
       height: 3px;
@@ -57,17 +69,6 @@ const NavStyles = styled.nav`
         width: 80%;
       }
     }
-
-    /* .account {
-      position: relative;
-
-      :hover ${NavDropdownStyles} {
-        display: block;
-        div {
-          display: block;
-        }
-      }
-    } */
   }
 
   /* @media (max-width: 1300px) {
