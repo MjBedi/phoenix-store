@@ -71,6 +71,7 @@ const SearchStyles = styled.div`
     /* max-width: var(--maxwidth); */
     padding: clamp(1rem, 1vh, 2.6rem) clamp(1rem, 1.4vw, 2rem);
     border: 0;
+    border-radius: 1rem;
     font-size: clamp(1.6rem, 1.8vw, 2rem);
     background: mistyrose;
     height: 100%;

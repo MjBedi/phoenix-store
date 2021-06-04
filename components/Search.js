@@ -93,7 +93,7 @@ export default function Search() {
             aria-label="Search Bar"
             {...getInputProps({
               type: 'search',
-              placeholder: 'Search for an Item',
+              placeholder: 'Search...',
               id: 'search',
               className: loading ? 'loading' : '',
             })}
