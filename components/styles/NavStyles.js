@@ -3,11 +3,14 @@ import styled from 'styled-components';
 const NavDropdownStyles = styled.div`
   display: none;
   position: absolute;
-  background-color: var(--lightred);
   text-decoration: none;
+
+  background-color: #ffffff1c;
+  backdrop-filter: blur(10px);
+
   padding: 1rem;
   border-radius: 0.6rem;
-  box-shadow: 0px 20px 20px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 20px 25px 5px rgba(0, 0, 0, 0.1);
 
   a {
     padding: 12px 16px;
