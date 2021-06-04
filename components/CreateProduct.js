@@ -47,7 +47,7 @@ export default function CreateProduct() {
 
   // ----useMutation Hook----
 
-  const [createProduct, { data, error, loading }] = useMutation(
+  const [createProduct, { error, loading }] = useMutation(
     CREATE_PRODUCT_MUTATION,
     {
       variables: inputs,
@@ -55,7 +55,7 @@ export default function CreateProduct() {
       refetchQueries: [{ query: ALL_PRODUCTS_QUERY }],
     }
   );
-  console.log(data, error, loading);
+  // console.log(data, error, loading);
 
   // ----Handling Submit----
 
