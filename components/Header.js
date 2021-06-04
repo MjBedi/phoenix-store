@@ -41,7 +41,7 @@ const loading = keyframes`
 `;
 
 const Logo = styled.h1`
-  font-size: clamp(2.4rem, 3.2vw, 3.8rem);
+  font-size: clamp(2.8rem, 3.2vw, 3.8rem);
   position: relative;
   z-index: 2;
   white-space: nowrap;
