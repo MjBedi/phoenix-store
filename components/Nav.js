@@ -13,13 +13,10 @@ export default function Nav() {
 
   return (
     <NavStyles>
-      <Link href="/products">Products</Link>
+      {/* <Link href="/products">Products</Link> */}
       {/* LOGGED-IN State */}
       {user && (
         <>
-          {/* <Link href="/sell">Sell</Link>
-          <Link href="/orders">Orders</Link> */}
-          <SignOut />
           <div className="relative">
             <Link href="/account">
               <button type="button">
