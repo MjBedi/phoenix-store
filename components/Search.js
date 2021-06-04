@@ -3,6 +3,7 @@ import { resetIdCounter, useCombobox } from 'downshift';
 import debounce from 'lodash/debounce';
 import { useRouter } from 'next/router';
 import { DropDown, DropDownItem, SearchStyles } from './styles/DropDown';
+import LoadingScreen from './styles/Loading';
 import { SearchSvg } from './styles/Svg';
 
 // ------------------------------------Search-Query
@@ -101,7 +102,9 @@ export default function Search() {
       </div>
       <DropDown {...getMenuProps()}>
         {isOpen && loading ? (
-          <DropDownItem>...🔎</DropDownItem>
+          <DropDownItem>
+            <LoadingScreen />
+          </DropDownItem>
         ) : (
           isOpen &&
           items.map((item, index) => (
