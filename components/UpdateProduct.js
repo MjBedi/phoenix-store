@@ -5,6 +5,7 @@ import ErrorMessage from './ErrorMessage';
 import { SINGLE_PRODUCT_QUERY } from './SingleProduct';
 import Form from './styles/Form';
 import { ALL_PRODUCTS_QUERY } from './Products';
+import LoadingScreen from './styles/Loading';
 
 // ------------------------------------Update-Mutation
 
@@ -61,7 +62,7 @@ export default function UpdateProduct({ id }) {
   // ...IMP. Check for LOADING STATE
   // Must come after Hooks, for avoiding the Error
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <LoadingScreen />;
 
   // ----Handling Submit----
 

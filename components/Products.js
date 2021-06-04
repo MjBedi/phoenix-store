@@ -3,6 +3,7 @@ import gql from 'graphql-tag';
 import styled from 'styled-components';
 import { perPage } from '../config';
 import Product from './Product';
+import LoadingScreen from './styles/Loading';
 
 // ------------------------------------Query
 
@@ -74,7 +75,7 @@ export default function Products({ page }) {
   });
   // console.log(data, error, loading);
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <LoadingScreen />;
   if (error) return <p>Error: {error.message}</p>;
 
   return (

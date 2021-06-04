@@ -6,6 +6,7 @@ import { Breadcrumbs } from '../lib/breadcrumbs';
 import formatMoney from '../lib/formatMoney';
 import ErrorMessage from './ErrorMessage';
 import AddToCart from './AddToCart';
+import LoadingScreen from './styles/Loading';
 
 // ------------------------------------Query
 
@@ -114,7 +115,7 @@ export default function SingleProduct({ id }) {
   });
   // console.log({ data, error, loading });
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <LoadingScreen />;
   if (error) return <ErrorMessage error={error} />;
 
   // Destructuring Product property from data object
