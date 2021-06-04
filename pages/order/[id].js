@@ -4,6 +4,7 @@ import gql from 'graphql-tag';
 import ErrorMessage from '../../components/ErrorMessage';
 import OrderStyles from '../../components/styles/OrderStyles';
 import formatMoney from '../../lib/formatMoney';
+import LoadingScreen from '../../components/styles/Loading';
 
 // ------------------------------------Single-Order-Query
 
@@ -41,7 +42,7 @@ export default function SingleOrderPage({ query }) {
 
   // console.log(`SOQ`, { data, error, loading });
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <LoadingScreen />;
   if (error) return <ErrorMessage error={error} />;
   const { order } = data;
 

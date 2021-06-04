@@ -3,6 +3,7 @@ import gql from 'graphql-tag';
 import Link from 'next/link';
 import styled from 'styled-components';
 import ErrorMessage from '../components/ErrorMessage';
+import LoadingScreen from '../components/styles/Loading';
 import OrderItemStyles from '../components/styles/OrderItemStyles';
 import formatMoney from '../lib/formatMoney';
 
@@ -71,7 +72,7 @@ export default function OrdersPage() {
 
   // console.log(`UOQ`, { data, error, loading });
 
-  if (loading) return <p>Loading...</p>;
+  if (loading) return <LoadingScreen />;
   if (error) return <ErrorMessage error={error} />;
   const { allOrders } = data;
 
