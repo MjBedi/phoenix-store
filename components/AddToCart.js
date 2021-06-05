@@ -3,13 +3,17 @@ import gql from 'graphql-tag';
 import Link from 'next/link';
 import { CURRENT_USER_QUERY, useUser } from './User';
 
-const ADD_TO_CART_MUTATION = gql`
+// ------------------------------------AddToCart-Mutation
+
+export const ADD_TO_CART_MUTATION = gql`
   mutation ADD_TO_CART_MUTATION($id: ID!) {
     addToCart(productId: $id) {
       id
     }
   }
 `;
+
+// ------------------ADD-TO-CART COMPONENT------------------
 
 export default function AddToCart({ id }) {
   const [addToCart, { loading }] = useMutation(ADD_TO_CART_MUTATION, {
