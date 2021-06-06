@@ -183,6 +183,22 @@ export const TakeAwaySvg = () => (
   </svg>
 );
 
+export const DialoguePointerSvg = () => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+    version="1.1"
+    x="0px"
+    y="0px"
+    viewBox="0 0 500 500"
+    enableBackground="new 0 0 500 500"
+    xmlSpace="preserve"
+    className="pointer"
+  >
+    <path d="M497.5,157.6L302.3,352.7c-28.5,28.5-74.7,28.5-103.2,0L4,157.6" />
+  </svg>
+);
+
 // {/* <svg
 //   fill="none"
 //   viewBox="0 0 24 29"
