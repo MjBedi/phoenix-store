@@ -6,17 +6,32 @@ const NavDropdownStyles = styled.div`
   text-decoration: none;
 
   background-color: #ffffff1c;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(20px);
 
   padding: 1rem;
   border-radius: 0.6rem;
   box-shadow: 0px 20px 25px 5px rgba(0, 0, 0, 0.1);
 
-  a {
+  transform: translateX(-32%);
+
+  a,
+  button {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
     text-align: left;
+  }
+
+  .pointer {
+    display: block;
+    position: absolute;
+    fill: #ffeceb;
+
+    width: 20px;
+    height: 20px;
+    top: -13px;
+    left: 50%;
+    transform: translateX(-50%) rotate(180deg);
   }
 `;
 
