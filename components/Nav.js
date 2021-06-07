@@ -1,8 +1,13 @@
 import Link from 'next/link';
+import { useState } from 'react';
 import { useCart } from '../lib/cartState';
 import CartCounter from './CartCounter';
 import SignOut from './SignOut';
-import { NavDropdownStyles, NavStyles } from './styles/NavStyles';
+import {
+  MenuWrapperStyles,
+  NavDropdownStyles,
+  NavStyles,
+} from './styles/NavStyles';
 import { AccountSvg, CartSvg, DialoguePointerSvg } from './styles/Svg';
 import { useUser } from './User';
 
@@ -11,25 +16,14 @@ export default function Nav() {
   const user = useUser();
   const { openCart } = useCart();
 
+  const [isOpen, setisOpen] = useState(false);
+
   return (
     <NavStyles>
       {/* <Link href="/products">Products</Link> */}
       {/* LOGGED-IN State */}
       {user && (
         <>
-          <div className="relative">
-            <Link href="/account">
-              <button type="button">
-                <AccountSvg />
-              </button>
-            </Link>
-            <NavDropdownStyles>
-              <DialoguePointerSvg />
-              <Link href="/sell">Sell</Link>
-              <Link href="/orders">Orders</Link>
-              <SignOut />
-            </NavDropdownStyles>
-          </div>
           <button type="button" onClick={openCart}>
             <CartSvg />
             <CartCounter
@@ -39,6 +33,23 @@ export default function Nav() {
               )}
             />
           </button>
+          <MenuWrapperStyles onClick={() => setisOpen(!isOpen)} isOpen={isOpen}>
+            {/* <Link href="/account">
+              <button type="button">
+              </button>
+            </Link> */}
+            {/* <AccountSvg /> */}
+            <span />
+            <span />
+            <span />
+            <NavDropdownStyles isOpen={isOpen}>
+              <DialoguePointerSvg />
+              <Link href="/sell">Sell</Link>
+              <Link href="/orders">Orders</Link>
+              <Link href="/account">Account</Link>
+              <SignOut />
+            </NavDropdownStyles>
+          </MenuWrapperStyles>
         </>
       )}
 
