@@ -8,7 +8,7 @@ import {
   NavDropdownStyles,
   NavStyles,
 } from './styles/NavStyles';
-import { AccountSvg, CartSvg, DialoguePointerSvg } from './styles/Svg';
+import { CartSvg, DialoguePointerSvg } from './styles/Svg';
 import { useUser } from './User';
 
 export default function Nav() {
@@ -34,11 +34,6 @@ export default function Nav() {
             />
           </button>
           <MenuWrapperStyles onClick={() => setisOpen(!isOpen)} isOpen={isOpen}>
-            {/* <Link href="/account">
-              <button type="button">
-              </button>
-            </Link> */}
-            {/* <AccountSvg /> */}
             <span />
             <span />
             <span />
