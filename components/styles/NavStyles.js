@@ -69,12 +69,6 @@ const MenuWrapperStyles = styled.div`
     align-self: flex-end;
   }
 
-  /* &:active {
-    transition: all 0.3s ease;
-    transform: translateY(-1.5%);
-    box-shadow: 0px 20px 25px 5px rgba(0, 0, 0, 0.1);
-  } */
-
   /* :hover ${NavDropdownStyles} {
     display: block;
     z-index: 10;
@@ -88,14 +82,14 @@ const NavStyles = styled.nav`
   justify-self: end;
   white-space: nowrap;
 
-  .relative {
+  /* .relative {
     align-self: center;
 
     :hover ${NavDropdownStyles} {
       display: block;
       z-index: 10;
     }
-  }
+  } */
 
   a,
   button {
