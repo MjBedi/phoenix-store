@@ -1,22 +1,24 @@
 import styled from 'styled-components';
 
 const NavDropdownStyles = styled.div`
-  display: none;
+  display: ${(props) => (props.isOpen ? 'block' : 'none')};
   position: absolute;
   text-decoration: none;
 
   background-color: #ffffff1c;
   backdrop-filter: blur(20px);
 
+  margin-top: 4rem;
   padding: 1rem;
   border-radius: 0.6rem;
   box-shadow: 0px 20px 25px 5px rgba(0, 0, 0, 0.1);
 
-  transform: translateX(-32%);
+  transform: translateX(-78%);
+  /* transition: display 0.3s ease-in-out; */
 
   a,
   button {
-    padding: 12px 16px;
+    padding: 10px 20px !important;
     text-decoration: none;
     display: block;
     text-align: left;
@@ -30,9 +32,53 @@ const NavDropdownStyles = styled.div`
     width: 20px;
     height: 20px;
     top: -13px;
-    left: 50%;
-    transform: translateX(-50%) rotate(180deg);
+    left: 78%;
+    transform: rotate(180deg);
   }
+`;
+
+const MenuWrapperStyles = styled.div`
+  margin-left: 1.6rem;
+  align-self: center;
+  width: 36px;
+  height: 36px;
+  padding: 9px 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  z-index: 2;
+  transition: all 0.3s ease;
+
+  border-radius: 2rem;
+  background: ${(props) => (props.isOpen ? 'var(--litTwo)' : null)};
+  box-shadow: ${(props) => (props.isOpen ? '0px 7px 29px 0px #c48d8d87' : 0)};
+  /* box-shadow: 0px 7px 29px 0px #c48d8d87; */
+
+  span {
+    height: 1.6px;
+    width: 100%;
+    background: var(--black);
+    /* border-bottom: 2px solid rgba(0, 0, 00, 0.85); */
+    transition: all 0.3s ease;
+    transform-origin: right center;
+  }
+
+  span:nth-of-type(2) {
+    width: 15px;
+    align-self: flex-end;
+  }
+
+  /* &:active {
+    transition: all 0.3s ease;
+    transform: translateY(-1.5%);
+    box-shadow: 0px 20px 25px 5px rgba(0, 0, 0, 0.1);
+  } */
+
+  /* :hover ${NavDropdownStyles} {
+    display: block;
+    z-index: 10;
+  } */
 `;
 
 const NavStyles = styled.nav`
@@ -94,4 +140,4 @@ const NavStyles = styled.nav`
   } */
 `;
 
-export { NavStyles, NavDropdownStyles };
+export { NavStyles, NavDropdownStyles, MenuWrapperStyles };
