@@ -21,6 +21,7 @@ export default function Nav() {
   return (
     <NavStyles>
       {/* <Link href="/products">Products</Link> */}
+
       {/* LOGGED-IN State */}
       {user && (
         <>
@@ -33,6 +34,7 @@ export default function Nav() {
               )}
             />
           </button>
+
           <MenuWrapperStyles onClick={() => setisOpen(!isOpen)} isOpen={isOpen}>
             <span />
             <span />
@@ -47,12 +49,6 @@ export default function Nav() {
           </MenuWrapperStyles>
         </>
       )}
-
-      {/* {
-        <button type="button">
-          <SearchSvg />
-        </button>
-      } */}
 
       {!user && (
         <>
