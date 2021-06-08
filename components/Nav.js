@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { useCart } from '../lib/cartState';
 import CartCounter from './CartCounter';
 import SignOut from './SignOut';
@@ -18,6 +18,8 @@ export default function Nav() {
 
   const [isOpen, setisOpen] = useState(false);
 
+  const nodeRef = useRef();
+
   return (
     <NavStyles>
       {/* <Link href="/products">Products</Link> */}
@@ -35,7 +37,11 @@ export default function Nav() {
             />
           </button>
 
-          <MenuWrapperStyles onClick={() => setisOpen(!isOpen)} isOpen={isOpen}>
+          <MenuWrapperStyles
+            ref={nodeRef}
+            onClick={() => setisOpen(!isOpen)}
+            isOpen={isOpen}
+          >
             <span />
             <span />
             <span />
