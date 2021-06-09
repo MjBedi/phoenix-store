@@ -14,8 +14,11 @@ import { useUser } from './User';
 export default function Nav() {
   // Check if the User is Present or else Returns NULL
   const user = useUser();
+
+  // Manage Cart state with useCart Hook
   const { openCart } = useCart();
 
+  // Custom Hook to Detect Click Outside the Referenced Element
   const { isOpen, triggerRef, nodeRef } = useDetectClickOut(false);
 
   return (
