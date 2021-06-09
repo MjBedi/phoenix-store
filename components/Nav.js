@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import { useRef, useState } from 'react';
 import { useCart } from '../lib/cartState';
+import useDetectClickOut from '../lib/useDetectClickOut';
 import CartCounter from './CartCounter';
 import SignOut from './SignOut';
 import {
@@ -16,9 +16,7 @@ export default function Nav() {
   const user = useUser();
   const { openCart } = useCart();
 
-  const [isOpen, setisOpen] = useState(false);
-
-  const nodeRef = useRef();
+  const { isOpen, triggerRef, nodeRef } = useDetectClickOut(false);
 
   return (
     <NavStyles>
@@ -37,15 +35,11 @@ export default function Nav() {
             />
           </button>
 
-          <MenuWrapperStyles
-            ref={nodeRef}
-            onClick={() => setisOpen(!isOpen)}
-            isOpen={isOpen}
-          >
+          <MenuWrapperStyles ref={triggerRef} isOpen={isOpen}>
             <span />
             <span />
             <span />
-            <NavDropdownStyles isOpen={isOpen}>
+            <NavDropdownStyles ref={nodeRef} isOpen={isOpen}>
               <DialoguePointerSvg />
               <Link href="/sell">Sell</Link>
               <Link href="/orders">Orders</Link>
