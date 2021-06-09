@@ -64,11 +64,11 @@ const CartItem = ({ cartItem }) => {
 
 export default function Cart() {
   const me = useUser();
-  const { cartOpen, closeCart } = useCart();
+  const { cartOpen, closeCart, nodeRef } = useCart();
   if (!me) return null;
 
   return (
-    <CartStyles open={cartOpen}>
+    <CartStyles open={cartOpen} ref={nodeRef}>
       <header>
         <Supreme>{me.name}'s Cart</Supreme>
         <CloseButton onClick={closeCart}>&times;</CloseButton>
