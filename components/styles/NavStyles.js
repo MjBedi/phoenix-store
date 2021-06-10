@@ -134,4 +134,20 @@ const NavStyles = styled.nav`
   } */
 `;
 
-export { NavStyles, NavDropdownStyles, MenuWrapperStyles };
+const SignInStyles = styled.a`
+  padding: 6px 10px !important;
+  height: fit-content;
+  align-self: center;
+  border: 2px solid var(--litThree) !important;
+  border-radius: 0.8rem;
+  background: var(--litTwo) !important;
+  box-shadow: 0px 2px 7px 0px #c48d8d87;
+  color: var(--black);
+
+  &:before,
+  &:after {
+    display: none;
+  }
+`;
+
+export { NavStyles, NavDropdownStyles, MenuWrapperStyles, SignInStyles };
