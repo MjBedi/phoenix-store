@@ -7,6 +7,7 @@ import {
   MenuWrapperStyles,
   NavDropdownStyles,
   NavStyles,
+  SignInStyles,
 } from './styles/NavStyles';
 import { CartSvg, DialoguePointerSvg } from './styles/Svg';
 import { useUser } from './User';
@@ -55,7 +56,9 @@ export default function Nav() {
 
       {!user && (
         <>
-          <Link href="/signin">Sign In</Link>
+          <Link href="/signin" passHref>
+            <SignInStyles>Sign In</SignInStyles>
+          </Link>
         </>
       )}
     </NavStyles>
