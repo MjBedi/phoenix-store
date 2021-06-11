@@ -75,6 +75,33 @@ const MenuWrapperStyles = styled.div`
   } */
 `;
 
+const SignInStyles = styled.a`
+  padding: 6px 10px !important;
+  height: fit-content;
+  align-self: center;
+  color: var(--black);
+  border-radius: 0.8rem;
+  border: 1px solid var(--litThree) !important;
+  background: hsl(6, 100%, 95%) !important;
+  box-shadow: 7px 7px 12px #e2dddd, -7px -7px 12px 0px #ffffff;
+
+  /* box-shadow: 3px 3px 13px hsl(6deg 100% 90%), -3px -3px 10px hsl(6deg 100% 98%); */
+
+  &:hover,
+  &:focus {
+    transition: all 0.2s ease-in;
+    background: hsl(6deg 100% 93%) !important;
+    box-shadow: inset 2px 2px 6px 0px #998181a1;
+
+    /* box-shadow: 4.5px 4.5px 15px #ebe6e6, -4.5px -4.5px 10px #ffffff; */
+  }
+
+  &:before,
+  &:after {
+    display: none;
+  }
+`;
+
 const NavStyles = styled.nav`
   margin: 0;
   padding: 0;
@@ -132,22 +159,6 @@ const NavStyles = styled.nav`
     justify-content: center;
     font-size: 1.5rem;
   } */
-`;
-
-const SignInStyles = styled.a`
-  padding: 6px 10px !important;
-  height: fit-content;
-  align-self: center;
-  border: 2px solid var(--litThree) !important;
-  border-radius: 0.8rem;
-  background: var(--litTwo) !important;
-  box-shadow: 0px 2px 7px 0px #c48d8d87;
-  color: var(--black);
-
-  &:before,
-  &:after {
-    display: none;
-  }
 `;
 
 export { NavStyles, NavDropdownStyles, MenuWrapperStyles, SignInStyles };
