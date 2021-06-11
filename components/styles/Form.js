@@ -13,9 +13,10 @@ const loading = keyframes`
 `;
 
 const Form = styled.form`
-  box-shadow: 0 0 5px 3px rgb(0 0 0 / 5%);
+  /* box-shadow: 0 0 5px 3px rgb(0 0 0 / 5%); */
+  box-shadow: 7px 7px 12px 0px #dad6d6, -8px -8px 8px #ffffff;
   background: var(--litTwo);
-  /* border: 5px solid var(--litThree); */
+  border: 1px solid var(--litThree);
   border-radius: 1rem;
   padding: 2rem 2.5rem;
   font-size: clamp(1.8rem, 2.5vw, 2.1rem);
@@ -39,6 +40,9 @@ const Form = styled.form`
     border: 1px solid #fee;
     border-radius: 0.6rem;
     line-height: 1.8;
+    box-shadow: 3px 3px 13px hsl(6deg 100% 90%),
+      -3px -3px 10px hsl(6deg 100% 98%);
+
     &:focus {
       outline: 0;
       border-color: var(--purple);
