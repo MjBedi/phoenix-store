@@ -83,7 +83,7 @@ const SearchStyles = styled.div`
 
     &:hover,
     &:focus {
-      box-shadow: var(--bs);
+      box-shadow: 7px 7px 12px #e2dddd, -7px -7px 12px 0px #ffffff;
       transition: all 240ms ease-in-out;
     }
   }
