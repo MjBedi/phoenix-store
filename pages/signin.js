@@ -2,6 +2,8 @@ import Link from 'next/link';
 import styled from 'styled-components';
 import SignIn from '../components/SignIn';
 
+// ------------------STYLED COMPONENTS------------------
+
 export const FormWrapStyles = styled.section`
   margin: 0 auto;
   max-width: 640px;
@@ -18,6 +20,8 @@ export const LinkWrapStyles = styled.div`
     line-height: 2;
   }
 `;
+
+// ------------------SIGN-IN-PAGE COMPONENT------------------
 
 export default function signInPage() {
   return (
