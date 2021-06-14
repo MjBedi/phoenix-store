@@ -40,8 +40,7 @@ const Form = styled.form`
     border: 1px solid #fee;
     border-radius: 0.6rem;
     line-height: 1.8;
-    box-shadow: 3px 3px 13px hsl(6deg 100% 90%),
-      -3px -3px 10px hsl(6deg 100% 98%);
+    box-shadow: 3px 3px 13px hsl(6, 100%, 90%), -3px -3px 10px hsl(6, 100%, 98%);
 
     &:focus {
       outline: 0;
@@ -59,9 +58,13 @@ const Form = styled.form`
     font-size: 2rem;
     font-weight: 600;
     padding: 0.5rem 1.2rem;
+    box-shadow: 2px 4px 12px hsl(7, 49%, 68%), -3px -3px 10px hsl(6, 100%, 98%);
 
-    &:hover {
+    &:hover,
+    &:focus {
       background: hsl(264, 90%, 60%);
+      transition: all 0.2s ease-in;
+      box-shadow: inset 2px 2px 6px 0px #614e6fab, inset -2px -2px 6px #ffffff66;
       /* box-shadow: 0px 5px 8px 1px rgb(0 0 0 / 18%); */
     }
   }
