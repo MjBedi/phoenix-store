@@ -75,11 +75,18 @@ const ProductPageStyle = styled.div`
     }
 
     .price {
-      padding: 0.8rem 4rem;
-      width: fit-content;
+      /* padding: 0.8rem 4rem;
+      width: fit-content; */
+      height: 8rem;
+      width: 10rem;
+      padding-top: 2.4rem;
+      text-align: center;
+
       border-radius: 0.6rem;
-      background: var(--litOne);
-      /* padding: 0 1rem; */
+      background-image: url('/static/priceBlob.svg');
+      background-position: center;
+      background-repeat: no-repeat;
+      /* background: var(--litOne); */
     }
 
     button {
