@@ -40,8 +40,8 @@ const NavDropdownStyles = styled.div`
 const MenuWrapperStyles = styled.div`
   margin-left: 1.6rem;
   align-self: center;
-  width: 36px;
-  height: 36px;
+  width: 37px;
+  height: 37px;
   padding: 9px 8px;
   display: flex;
   flex-direction: column;
@@ -50,6 +50,7 @@ const MenuWrapperStyles = styled.div`
   z-index: 2;
   transition: all 0.3s ease;
 
+  border: 1px solid var(--litTwo);
   border-radius: 2rem;
   background: ${(props) => (props.isOpen ? 'var(--litTwo)' : null)};
   box-shadow: ${(props) => (props.isOpen ? '0px 7px 29px 0px #c48d8d87' : 0)};
