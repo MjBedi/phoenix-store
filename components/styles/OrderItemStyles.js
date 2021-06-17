@@ -6,7 +6,7 @@ const OrderItemStyles = styled.li`
   padding: 2rem;
   border: 1px solid var(--offwhite);
   background: var(--litThree);
-  font-size: clamp(1.6rem, 2vw, 2rem);
+  font-size: clamp(1.4rem, 2vw, 2rem);
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   h2 {
