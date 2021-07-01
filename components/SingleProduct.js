@@ -7,6 +7,7 @@ import formatMoney from '../lib/formatMoney';
 import ErrorMessage from './ErrorMessage';
 import AddToCart from './AddToCart';
 import LoadingScreen from './styles/Loading';
+import Sparkles from './Sparkle';
 
 // ------------------------------------Query
 
@@ -75,18 +76,18 @@ const ProductPageStyle = styled.div`
     }
 
     .price {
-      /* padding: 0.8rem 4rem;
-      width: fit-content; */
-      height: 8rem;
+      padding: 0.8rem 4rem;
+      width: fit-content;
+      /* height: 8rem;
       width: 10rem;
       padding-top: 2.4rem;
-      text-align: center;
+      text-align: center; */
 
       border-radius: 0.6rem;
-      background-image: url('/static/priceBlob.svg');
+      background-color: #fffafacc;
+      /* background-image: url('/static/priceBlob.svg');
       background-position: center;
-      background-repeat: no-repeat;
-      /* background: var(--litOne); */
+      background-repeat: no-repeat; */
     }
 
     button {
@@ -149,7 +150,9 @@ export default function SingleProduct({ id }) {
               adipisicing elit. Repellendus, quibusdam!
             </p>
           </div>
-          <p className="price"> {formatMoney(Product.price)} </p>
+          <Sparkles>
+            <p className="price"> {formatMoney(Product.price)} </p>
+          </Sparkles>
           <AddToCart id={Product.id} />
         </div>
       </ProductPageStyle>
