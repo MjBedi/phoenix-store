@@ -22,7 +22,9 @@ export const SINGLE_PRODUCT_QUERY = gql`
       price
       description
       photo {
+        id
         image {
+          id
           publicUrlTransformed
         }
         altText
