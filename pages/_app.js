@@ -1,10 +1,12 @@
 import { ApolloProvider } from '@apollo/client';
 import Router from 'next/router';
 import NProgress from 'nprogress';
+import Head from 'next/head';
 import { CartStateProvider } from '../lib/cartState';
 import Page from '../components/Page';
 import '../components/styles/nprogress.css';
-import withData from '../lib/withData';
+// import withData from '../lib/withData';
+import { useApollo } from '../lib/apollo';
 
 // ----NProgress----
 
@@ -14,9 +16,24 @@ Router.events.on('routeChangeError', () => NProgress.done());
 
 // ------------------------------------MyApp
 
-function MyApp({ Component, pageProps, apollo }) {
+function MyApp({ Component, pageProps }) {
+  const apolloClient = useApollo(pageProps);
+
   return (
-    <ApolloProvider client={apollo}>
+    <ApolloProvider client={apolloClient}>
+      <Head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content="Mj" />
+        <meta
+          name="description"
+          content="Buy dark and milk Chocolate box, bar and pack."
+        />
+        <meta property="og:title" content="Phoenix Store" />
+        <meta property="og:description" content="Brief description" />
+        <meta property="og:site_name" content="Phoenix Store" />
+      </Head>
+
       <CartStateProvider>
         <Page>
           <Component {...pageProps} />
@@ -35,4 +52,4 @@ MyApp.getInitialProps = async function ({ Component, ctx }) {
   return { pageProps };
 };
 
-export default withData(MyApp);
+export default MyApp;
