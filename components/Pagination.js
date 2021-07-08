@@ -25,7 +25,7 @@ export default function Pagination({ page }) {
   // ----useQuery Hook----
 
   const { data, error, loading } = useQuery(PAGINATION_QUERY);
-  if (loading) return 'Loading...';
+  if (loading) return '';
   if (error) return <ErrorMessage error={error} />;
 
   const { count } = data._allProductsMeta;
