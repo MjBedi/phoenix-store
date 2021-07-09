@@ -8,18 +8,25 @@ import LoadingScreen from './styles/Loading';
 // ------------------------------------Query
 
 export const ALL_PRODUCTS_QUERY = gql`
-  query ALL_PRODUCTS_QUERY($skip: Int = 0, $first: Int) {
+  query ALL_PRODUCTS_QUERY(
+    $skip: Int = 0
+    $first: Int
+    $status: String = "AVAILABLE"
+  ) {
     # Check Graphiql Docs for Arguments info.
-    allProducts(skip: $skip, first: $first) {
+    allProducts(skip: $skip, first: $first, where: { status_in: [$status] }) {
       id
       name
       price
       description
+      status
       photo {
         id
         image {
           id
-          publicUrlTransformed
+          publicUrlTransformed(
+            transformation: { width: "600", crop: "limit", quality: "auto" }
+          )
         }
       }
     }
