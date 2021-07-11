@@ -22,7 +22,9 @@ const SEARCH_PRODUCTS_QUERY = gql`
       name
       photo {
         image {
-          publicUrlTransformed
+          publicUrlTransformed(
+            transformation: { width: "180", crop: "limit", quality: "auto" }
+          )
         }
       }
     }
@@ -47,7 +49,7 @@ export default function Search() {
   // Array of all the items returned
   const items = data?.searchTerm || [];
 
-  const findItemDebounce = debounce(findItems, 1200);
+  const findItemDebounce = debounce(findItems, 1000);
 
   // ----Dropshift.js----
 
@@ -65,7 +67,7 @@ export default function Search() {
 
     // ----onChange----
     onInputValueChange() {
-      // Waiting 1200 ms before running the Query a.k.a NotDDOSingUrOwnSite
+      // Waiting 1000 ms before running the Query a.k.a NotDDOSingUrOwnSite
       findItemDebounce({
         variables: { searchTerm: inputValue },
       });
