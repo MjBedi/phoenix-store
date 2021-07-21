@@ -34,7 +34,7 @@ export default class MyDocument extends Document {
         <Head>
           <link rel="icon" type="image/png" href="/static/favicon.png" />
 
-          <script src="https://checkout.razorpay.com/v1/checkout.js" />
+          <script async src="https://checkout.razorpay.com/v1/checkout.js" />
         </Head>
         <body>
           <Main />
